@@ -13,8 +13,8 @@ import {
     SimpleForm,
     ReferenceInput,
     SelectInput
-} from 'admin-on-rest';
-import Icon from 'material-ui/svg-icons/social/group';
+} from 'react-admin';
+import Icon from '@material-ui/icons/Group';
 
 export const RoleMappingIcon = Icon;
 

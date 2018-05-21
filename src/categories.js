@@ -11,8 +11,8 @@ import {
     DeleteButton,
     SimpleForm,
     TextInput
-} from 'admin-on-rest';
-import Icon from 'material-ui/svg-icons/action/bookmark';
+} from 'react-admin';
+import Icon from '@material-ui/icons/Bookmark';
 
 export const CategoryIcon = Icon;
 

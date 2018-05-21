@@ -11,8 +11,8 @@ import {
     DeleteButton,
     SimpleForm,
     TextInput
-} from 'admin-on-rest';
-import Icon from 'material-ui/svg-icons/file/attachment';
+} from 'react-admin';
+import Icon from '@material-ui/icons/Attachment';
 
 export const TagIcon = Icon;
 

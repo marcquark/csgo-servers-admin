@@ -1,5 +1,5 @@
 import React from 'react';
-import { Admin, Resource, Delete, fetchUtils } from 'admin-on-rest';
+import { Admin, Resource, fetchUtils } from 'react-admin';
 import loopbackRestClient from 'aor-loopback';
 
 import { ServerList, ServerEdit, ServerCreate, ServerIcon } from './servers';
@@ -9,7 +9,7 @@ import { UserList, UserEdit, UserCreate, UserIcon } from './users';
 import { RoleList, RoleEdit, RoleCreate, RoleIcon } from './roles';
 import { RoleMappingList, RoleMappingEdit, RoleMappingCreate, RoleMappingIcon } from './rolemappings';
 
-import authClient from './authClient';
+import authProvider from './authProvider';
 
 const config = require('./config');
 
@@ -23,14 +23,13 @@ const httpClient = (url, options = {}) => {
 }
 
 const App = () => (
-  <Admin title="csgo-servers Admin UI" restClient={loopbackRestClient(config.api.baseUrl, httpClient)} authClient={authClient}>
+  <Admin title="csgo-servers Admin UI" dataProvider={loopbackRestClient(config.api.baseUrl, httpClient)} authProvider={authProvider}>
     {permissions => [
       <Resource
         name="servers"
         list={ServerList}
         edit={ServerEdit}
         create={ServerCreate}
-        remove={Delete}
         icon={ServerIcon}
       />,
       <Resource
@@ -38,14 +37,12 @@ const App = () => (
         list={CategoryList}
         edit={CategoryEdit}
         create={CategoryCreate}
-        remove={Delete}
         icon={CategoryIcon}
       />,
       <Resource name="tags"
         list={TagList}
         edit={TagEdit}
         create={TagCreate}
-        remove={Delete}
         icon={TagIcon}
       />,
       permissions === 'admin' ?
@@ -54,7 +51,6 @@ const App = () => (
           list={UserList}
           edit={UserEdit}
           create={UserCreate}
-          remove={Delete}
           icon={UserIcon}
         />
         : null,
@@ -64,7 +60,6 @@ const App = () => (
           list={RoleList}
           edit={RoleEdit}
           create={RoleCreate}
-          remove={Delete}
           icon={RoleIcon}
         />
         : null,
@@ -75,7 +70,6 @@ const App = () => (
           list={RoleMappingList}
           edit={RoleMappingEdit}
           create={RoleMappingCreate}
-          remove={Delete}
           icon={RoleMappingIcon}
         />
         : null,

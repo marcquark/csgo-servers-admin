@@ -22,8 +22,8 @@ import {
     SingleFieldList,
     ReferenceArrayInput,
     SelectArrayInput
-} from 'admin-on-rest';
-import Icon from 'material-ui/svg-icons/device/storage';
+} from 'react-admin';
+import Icon from '@material-ui/icons/Storage';
 
 export const ServerIcon = Icon;
 

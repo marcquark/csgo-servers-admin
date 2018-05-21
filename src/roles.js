@@ -11,8 +11,8 @@ import {
     DeleteButton,
     SimpleForm,
     TextInput
-} from 'admin-on-rest';
-import Icon from 'material-ui/svg-icons/social/person-outline';
+} from 'react-admin';
+import Icon from '@material-ui/icons/PersonOutline';
 
 export const RoleIcon = Icon;
 

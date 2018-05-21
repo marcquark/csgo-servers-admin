@@ -16,8 +16,8 @@ import {
     DeleteButton,
     SimpleForm,
     TextInput
-} from 'admin-on-rest';
-import Icon from 'material-ui/svg-icons/social/person';
+} from 'react-admin';
+import Icon from '@material-ui/icons/Person';
 
 export const UserIcon = Icon;
 
