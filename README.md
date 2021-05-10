@@ -1,3 +1,5 @@
+> :warning: **This code is outdated and not actively maintained. There may be security vulnerabilities in the code and/or its dependencies. Do not run this thing in production! Feel free to fork and improve it.**
+
 # csgo-servers-admin
 Admin UI for csgo-servers built with [react-admin](https://github.com/marmelab/react-admin)
 ## Installation instructions
